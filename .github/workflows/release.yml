@@ -27,7 +27,7 @@ jobs:
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WebAssembly package
-        run: wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target web
+        run: wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target bundler
 
       - name: Publish to npm
         run: |

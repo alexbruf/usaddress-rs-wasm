@@ -19,6 +19,6 @@ fn pass() {
         ("62704".to_string(), "ZipCode".to_string()),
     ]);
     let expected =   usaddress_rs_wasm::stringify(&serde_wasm_bindgen::to_value(&expected_result).unwrap()).as_string().unwrap();
-    let actual = usaddress_rs_wasm::stringify(&result).as_string().unwrap();
+    let actual = usaddress_rs_wasm::stringify(&serde_wasm_bindgen::to_value(&result).unwrap()).as_string().unwrap();
     assert_eq!(actual, expected,);
 }

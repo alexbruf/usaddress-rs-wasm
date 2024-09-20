@@ -1,6 +1,6 @@
 [package]
 name = "usaddress-rs-wasm"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Alex Brufsky <alex@spacinsider.com>"]
 edition = "2018"
 description = "A wasm wrapper for the usaddress crate"
@@ -28,6 +28,7 @@ serde_json = "1.0.128"
 serde-wasm-bindgen = "0.6.5"
 unicode-normalization = "0.1.24"
 xml = "0.8.20"
+tsify = "0.4.5"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"
