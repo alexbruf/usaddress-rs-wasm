@@ -39,7 +39,6 @@ jobs:
             cp "$file" "${file%.js}.mjs"
           done
           
-sm paw
       - name: Publish to npm
         run: |
           cd pkg
