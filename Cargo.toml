@@ -1,6 +1,6 @@
 [package]
 name = "usaddress-rs-wasm"
-version = "0.1.1"
+version = "0.1.3"
 authors = ["Alex Brufsky <alex@spacinsider.com>"]
 edition = "2018"
 description = "A wasm wrapper for the usaddress crate"

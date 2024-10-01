@@ -1,0 +1,16 @@
+{
+  "files": [
+		"./web/usaddress_web_bg.wasm",
+		"./web/usaddress_web.js",
+		"./web/usaddress_web.d.ts",
+	  "./node/usaddress_node_bg.wasm",
+    "./node/usaddress_node.js",
+    "./node/usaddress_node.d.ts",
+		"./bundler/usaddress_bundler_bg.wasm",
+    "./bundler/usaddress_bundler.mjs",
+    "./bundler/usaddress_bundler.d.ts"
+  ],
+
+	"main": "./node/usaddress_node.js",
+
+}

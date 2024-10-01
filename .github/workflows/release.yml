@@ -26,12 +26,24 @@ jobs:
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
-      - name: Build WebAssembly package
-        run: wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target bundler
-
+      - name: Build WebAssembly package for node
+        run: |
+          wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target web --out-name usaddress_web --out-dir ./pkg/web
+          wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target nodejs --out-name usaddress_node --out-dir ./pkg/node
+          wasm-pack build --scope ${{ secrets.NPM_SCOPE }} --target bundler --out-name usaddress_bundler --out-dir ./pkg/bundler
+          jq -s add ./pkg/bundler/package.json ./package.json.example > ./pkg/package.json
+          cp ./pkg/web/LICENSE ./pkg
+          cp ./pkg/web/README.md ./pkg
+          for file in pkg/bundler/*.js; do
+            # Copy each .js file to a new .mjs file
+            cp "$file" "${file%.js}.mjs"
+          done
+          
+sm paw
       - name: Publish to npm
         run: |
           cd pkg
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
