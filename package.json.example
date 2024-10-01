@@ -10,7 +10,5 @@
     "./bundler/usaddress_bundler.mjs",
     "./bundler/usaddress_bundler.d.ts"
   ],
-
-	"main": "./node/usaddress_node.js",
-
+	"main": "./node/usaddress_node.js"
 }
