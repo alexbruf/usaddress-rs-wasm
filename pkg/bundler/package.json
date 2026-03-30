@@ -1,0 +1,22 @@
+{
+  "name": "usaddress-rs-wasm",
+  "type": "module",
+  "collaborators": [
+    "Alex Brufsky <alex@spacinsider.com>"
+  ],
+  "description": "A wasm wrapper for the usaddress crate",
+  "version": "0.1.3",
+  "license": "MIT",
+  "files": [
+    "usaddress_rs_wasm_bg.wasm",
+    "usaddress_rs_wasm.js",
+    "usaddress_rs_wasm_bg.js",
+    "usaddress_rs_wasm.d.ts"
+  ],
+  "main": "usaddress_rs_wasm.js",
+  "types": "usaddress_rs_wasm.d.ts",
+  "sideEffects": [
+    "./usaddress_rs_wasm.js",
+    "./snippets/*"
+  ]
+}

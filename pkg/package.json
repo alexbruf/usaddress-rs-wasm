@@ -1,0 +1,28 @@
+{
+  "name": "@alexbruf/usaddress-rs-wasm",
+  "collaborators": [
+    "Alex Brufsky <alex@spacinsider.com>"
+  ],
+  "description": "A wasm wrapper for the usaddress crate",
+  "version": "0.1.6",
+  "license": "MIT",
+  "files": [
+    "./web/usaddress_web_bg.wasm",
+    "./web/usaddress_web.js",
+    "./web/usaddress_web.d.ts",
+    "./node/usaddress_node_bg.wasm",
+    "./node/usaddress_node.js",
+    "./node/usaddress_node.d.ts",
+    "./bundler/usaddress_rs_wasm_bg.wasm",
+    "./bundler/usaddress_rs_wasm_bg.js",
+    "./bundler/usaddress_rs_wasm.js",
+    "./bundler/usaddress_rs_wasm.d.ts"
+  ],
+  "main": "./node/usaddress_node.js",
+  "types": "./node/usaddress_node.d.ts",
+  "exports": {
+    ".": "./node/usaddress_node.js",
+    "./web": "./web/usaddress_web.js",
+    "./bundler": "./bundler/usaddress_rs_wasm.js"
+  }
+}
