@@ -1,0 +1,13 @@
+{
+  "name": "@alexbruf/usaddress-rs-wasm",
+  "description": "A wasm wrapper for the usaddress crate",
+  "version": "0.1.6",
+  "license": "MIT",
+  "main": "./pkg/node/usaddress_node.js",
+  "types": "./pkg/node/usaddress_node.d.ts",
+  "exports": {
+    ".": "./pkg/node/usaddress_node.js",
+    "./web": "./pkg/web/usaddress_web.js",
+    "./bundler": "./pkg/bundler/usaddress_rs_wasm.js"
+  }
+}
